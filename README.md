@@ -1,7 +1,7 @@
 [![Circom Badge](https://img.shields.io/badge/circuits-circom-black)](https://github.com/iden3/circom)
 [![Snarkjs Badge](https://img.shields.io/badge/proof_system-snarkjs-yellow)](https://github.com/iden3/snarkjs)
 ![Python Badge](https://img.shields.io/badge/generate-python-green)
-# Decentralized Zero-Knowledge Image Transformations
+# Privacy-Preserving Proofs 4 Edited Photos  
 
 In the digital age, many online images are transformations of original, private content. Whether for economic value or sensitive material, maintaining the confidentiality and authenticity of the original image is crucial. Our project introduces a system designed to efficiently prove and verify the authenticity of transformed images.
 
