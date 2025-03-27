@@ -1,38 +1,22 @@
-[![Circom Badge](https://img.shields.io/badge/circuits-circom-black)](https://github.com/iden3/circom)
-[![Snarkjs Badge](https://img.shields.io/badge/proof_system-snarkjs-yellow)](https://github.com/iden3/snarkjs)
-![Python Badge](https://img.shields.io/badge/generate-python-green)
-# Privacy-Preserving Proofs 4 Edited Photos  
 
-In the digital age, many online images are transformations of original, private content. Whether for economic value or sensitive material, maintaining the confidentiality and authenticity of the original image is crucial. Our project introduces a system designed to efficiently prove and verify the authenticity of transformed images.
+<div align="center">
+<h2>Trust Nobody: Privacy-Preserving Proofs for Edited Photos with Your Laptop</h2>
 
-## Key Objectives:
+**Pierpaolo Della Monica**,   **Ivan Visconti**,  **Andrea Vitaletti**  and  **Marco Zecchini**
 
-1. **Confidentiality:** Ensure the original image remains private.
-2. **Efficient Proof Generation:** Enable proof computation on standard hardware.
-3. **Integrity:** Confirm that only advertised transformations have been applied.
-4. **Fast Fraud Detection:** Swiftly identify and reject fraudulent proofs.
+Sapienza University of Rome, Italy
 
-Our approach employs a divide-and-conquer strategy, applying sub-transformations to tiles of the original image. These tiles are then reconnected with their sub-proofs, ensuring both efficiency and security.
+<a href="https://github.com/pierpaolodm/Privacy-PreservingProofs4EditedPhotos"><img src='https://img.shields.io/badge/Project-Page-red'></a>
+<a href="https://eprint.iacr.org/2024/1074"><img src='https://img.shields.io/badge/Technical-Report-blue'></a>
 
-In our experimental evaluation, we focus on transformations like resizing. Results demonstrate the practicality of our approach, showcasing the generation of a faithful transformation for a 30MP high-resolution image with minimal hardware requirements: 16GB of RAM and 8 cores in just over 45 minutes.
+Welcome to the official GitHub repository for our IEEE S&P25 paper "Trust Nobody: Privacy-Preserving Proofs for Edited Photos with Your Laptop". This repository contains the implementation of the  experiments discussed in the paper, providing all the necessary resources to reproduce our results and explore the techniques we developed.
+</div>
 
-## Requirements
-### For Python:
+### [Abstract]
+In this work, we introduce a novel system for proving and verifying the authenticity of transformations applied to confidential images. The proposed system ensures:  
+1) **Confidentiality** – the original image remains private,  
+2) **Efficient Proof Generation** – the proof certifying the correctness of the transformation can be computed efficiently on a common laptop, even for high-resolution images,  
+3) **Authenticity** – only the advertised transformations have been applied,  
+4) **Fast Fraud Detection** – enabling rapid identification of fraudulent proofs.
 
-- **numpy** v1.26.2
-- **opencv_python** v4.8.1.78
-- **tensorflow_cpu** v2.14.0
-
-### Other Requirements:
-
-- Install **circom**
-- Install **snarkjs**
-- Install **rapidsnark**
-
-Make sure to obtain a `poweroftau`.
-
-## Getting Started:
-
-1.  Clone this repository to your local system.
-2.  Run `generate_proof.py`
-
+Our contributions include new definitions that model confidentiality and adaptive adversaries, techniques to accelerate the prover, and an efficient construction based on custom signatures and hashes. We also propose a less efficient construction utilizing signatures and hashes from the C2PA specifications. Experimental results confirm the practicality of our approach, allowing the computation of authentic transformations of high-resolution images on standard computing resources. Prior work either demands expensive computing power or fails to meet confidentiality requirements.
